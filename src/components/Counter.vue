@@ -15,7 +15,10 @@ export default {
         start: {
             type: Number,
             default: 100,
-            required: true // La propiedad start es obligatoria
+            required: true, // La propiedad start es obligatoria
+            validator( value ){
+                return value > 100
+            }
         }
     },
     name : 'Counter', // Para identificarlo en el vue.devtools
